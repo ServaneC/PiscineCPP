@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 15:07:49 by schene            #+#    #+#             */
-/*   Updated: 2020/11/07 16:05:03 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/08 00:05:46 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <iomanip>
+# include <limits>
 
 class   Contact
 {

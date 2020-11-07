@@ -6,13 +6,13 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 15:08:09 by schene            #+#    #+#             */
-/*   Updated: 2020/11/07 19:14:13 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/07 22:50:44 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClassContact.hpp"
 
-void	Contact::fill_fields()
+void            Contact::fill_fields()
 {
     std::cout << "\033[0;36mFirst Name: ";
     std::cin >> first_name;
@@ -38,7 +38,7 @@ void	Contact::fill_fields()
     std::cin >> secret;
 }
 
-void	Contact::aff_contact()
+void            Contact::aff_contact()
 {
 	std::cout << "\n\033[0;36mFirst Name: " << first_name << std::endl;
     std::cout << "Last Name: " << last_name << std::endl;
@@ -53,7 +53,7 @@ void	Contact::aff_contact()
     std::cout << "Darkest Secret: " << secret << "\033[0m\n";
 }
 
-std::string		resize_string(std::string my_string)
+std::string     resize_string(std::string my_string)
 {
 	if (my_string.length() > 10)
 	{

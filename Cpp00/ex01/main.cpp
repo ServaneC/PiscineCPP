@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 18:22:51 by schene            #+#    #+#             */
-/*   Updated: 2020/11/07 19:20:03 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/08 00:07:59 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int     search_contact()
         {
             std::cout << "\n❌ \033[0;31mThis is not a valid index\033[0m\n";
             std::cin.clear();
-            fflush(stdin);
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             return (search_contact());
         }
     }
