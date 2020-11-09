@@ -6,17 +6,17 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/08 16:26:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/09 16:59:07 by schene           ###   ########.fr        #
+#    Updated: 2020/11/09 17:51:33 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=  Pony.cpp main.cpp
+SRCS		=	srcs/Zombie.cpp srcs/main.cpp srcs/ZombieEvent.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
 RM			= rm -f
 
-NAME		= Pony
+NAME		= zombie
 
 CC			= clang++
 
