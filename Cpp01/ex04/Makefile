@@ -6,17 +6,17 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/08 16:26:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/09 18:42:17 by schene           ###   ########.fr        #
+#    Updated: 2020/11/09 22:50:41 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=  srcs/Pony.cpp srcs/main.cpp
+SRCS		= ex04.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
 RM			= rm -f
 
-NAME		= Pony
+NAME		= ex04
 
 CC			= clang++
 

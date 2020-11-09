@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:32:04 by schene            #+#    #+#             */
-/*   Updated: 2020/11/09 18:33:26 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/09 21:31:43 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		main()
 	z2 = event1.newZombie("Patrick");
 	std::cout << "\nCreated from the newZombie function... (allocated on the heap)\n";
 	z2->announce();
-	event1.setZombieType("voodoo");
+	event1.setZombieType("crawler");
 	std::cout << "\nCreated from the randomChump function... (allocated on the heap)\n";
 	z3 = event1.randomChump();
 	std::cout << std::endl;

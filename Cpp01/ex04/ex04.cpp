@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 17:03:20 by schene            #+#    #+#             */
-/*   Updated: 2020/11/09 18:48:13 by schene           ###   ########.fr       */
+/*   Created: 2020/11/09 22:51:46 by schene            #+#    #+#             */
+/*   Updated: 2020/11/09 23:01:30 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_HPP
-# define ZOMBIEEVENT_HPP
+#include <iostream>
 
-#include "Zombie.hpp"
-
-class ZombieEvent
+int			main()
 {
-	private:
-		std::string	type;
-	
-	public:
-		void	setZombieType(std::string z_type);
-		Zombie	*newZombie(std::string name);
-		Zombie	*randomChump();
-};
+	std::string 	str = "HI THIS IS BRAIN";
+	std::string		*ptr = &str;
+	std::string		&ref = str;
 
-#endif
+	std::cout << "Using the pointer...\n" << *ptr << std::endl;
+	std::cout << "Using the reference...\n" << ref << std::endl;
+}

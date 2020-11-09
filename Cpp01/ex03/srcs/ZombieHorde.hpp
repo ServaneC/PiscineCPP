@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 17:03:20 by schene            #+#    #+#             */
-/*   Updated: 2020/11/09 18:48:13 by schene           ###   ########.fr       */
+/*   Created: 2020/11/09 18:47:18 by schene            #+#    #+#             */
+/*   Updated: 2020/11/09 22:27:16 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_HPP
-# define ZOMBIEEVENT_HPP
+#ifndef ZOMBIEHORDE_HPP
+# define ZOMBIEHORDE_HPP
 
 #include "Zombie.hpp"
 
-class ZombieEvent
+class ZombieHorde
 {
 	private:
-		std::string	type;
-	
+		std::string horde_name;
+		int			nb_zombies;
+		int			nb_infections;
+		Zombie		*horde;
+
 	public:
-		void	setZombieType(std::string z_type);
-		Zombie	*newZombie(std::string name);
-		Zombie	*randomChump();
+		ZombieHorde(int n, std::string h_name);
+		~ZombieHorde();
+		void	annonce();
+		static std::string	gen_name();
+		void	infect_human();
 };
 
 #endif

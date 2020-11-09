@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 17:03:20 by schene            #+#    #+#             */
-/*   Updated: 2020/11/09 18:48:13 by schene           ###   ########.fr       */
+/*   Created: 2020/11/09 15:56:11 by schene            #+#    #+#             */
+/*   Updated: 2020/11/09 22:43:02 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_HPP
-# define ZOMBIEEVENT_HPP
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-#include "Zombie.hpp"
+#include <iostream>
 
-class ZombieEvent
+# define TALK "\033[0;33m🧠 "
+# define DEAD "\033[0;31m🤯 "
+# define EAT "\033[0;34m💉 "
+# define INFO "\033[0;32m🔴 "
+
+# define ENDL "\033[0m\n"
+
+class Zombie
 {
 	private:
-		std::string	type;
-	
+		int				victims;
+
 	public:
-		void	setZombieType(std::string z_type);
-		Zombie	*newZombie(std::string name);
-		Zombie	*randomChump();
+		std::string		name;
+		std::string		type;
+		Zombie();
+		Zombie(std::string z_name, std::string z_type);
+		~Zombie();
+		void	announce();
+		void	eat_someone();
 };
 
 #endif

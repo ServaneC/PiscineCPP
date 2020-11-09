@@ -6,7 +6,7 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/08 16:26:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/09 17:51:33 by schene           ###   ########.fr        #
+#    Updated: 2020/11/09 21:37:30 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJS		= ${SRCS:.cpp=.o}
 
 RM			= rm -f
 
-NAME		= zombie
+NAME		= Zombie
 
 CC			= clang++
 
