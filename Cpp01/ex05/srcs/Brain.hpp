@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 22:51:46 by schene            #+#    #+#             */
-/*   Updated: 2020/11/10 15:02:24 by schene           ###   ########.fr       */
+/*   Created: 2020/11/10 13:05:30 by schene            #+#    #+#             */
+/*   Updated: 2020/11/10 15:02:35 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
+
 #include <iostream>
 
-int			main()
+class Brain
 {
-	std::string 	str = "HI THIS IS BRAIN";
-	std::string		*ptr = &str;
-	std::string		&ref = str;
+	private:
+		double	weight;
+		int		qi;
 
-	std::cout << "Using the pointer...\n" << *ptr << std::endl;
-	std::cout << "Using the reference...\n" << ref << std::endl;
-}
+	public:
+		Brain();
+		Brain(double b_weight, int b_qi);
+		~Brain();
+		std::string identify(void) const;
+};
+
+#endif

@@ -6,17 +6,17 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/08 16:26:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/10 15:01:57 by schene           ###   ########.fr        #
+#    Updated: 2020/11/10 15:02:45 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	srcs/Zombie.cpp srcs/main.cpp srcs/ZombieEvent.cpp
+SRCS		=	srcs/Brain.cpp srcs/Human.cpp srcs/main.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
 RM			= rm -f
 
-NAME		= Zombie
+NAME		= HumanBrain
 
 CC			= clang++
 

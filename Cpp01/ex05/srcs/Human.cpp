@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 22:51:46 by schene            #+#    #+#             */
-/*   Updated: 2020/11/10 15:02:24 by schene           ###   ########.fr       */
+/*   Created: 2020/11/10 14:01:24 by schene            #+#    #+#             */
+/*   Updated: 2020/11/10 14:57:27 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Human.hpp"
+#include <string>
+#include <sstream>
 
-int			main()
+Human::Human()
 {
-	std::string 	str = "HI THIS IS BRAIN";
-	std::string		*ptr = &str;
-	std::string		&ref = str;
+}
 
-	std::cout << "Using the pointer...\n" << *ptr << std::endl;
-	std::cout << "Using the reference...\n" << ref << std::endl;
+Human::~Human()
+{
+}
+
+const Brain &Human::getBrain(void)
+{
+	return (this->brain);
+}
+
+std::string Human::identify(void)
+{
+	return (this->brain.identify());
 }

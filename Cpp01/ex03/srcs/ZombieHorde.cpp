@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 18:46:01 by schene            #+#    #+#             */
-/*   Updated: 2020/11/09 22:40:12 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/10 15:02:14 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,3 @@ void	ZombieHorde::infect_human()
 	std::cout << EAT << horde_name << " horde has infected " << nb_zombies / 2 << " humans" << ENDL;
 	std::cout << "❗️ There is now " << nb_infections << " humans infected by the horde\n";
 }
-

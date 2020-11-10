@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 22:51:46 by schene            #+#    #+#             */
-/*   Updated: 2020/11/10 15:02:24 by schene           ###   ########.fr       */
+/*   Created: 2020/11/10 13:20:11 by schene            #+#    #+#             */
+/*   Updated: 2020/11/10 14:52:41 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Brain.hpp"
+#include <string>
+#include <sstream>
 
-int			main()
+Brain::Brain()
 {
-	std::string 	str = "HI THIS IS BRAIN";
-	std::string		*ptr = &str;
-	std::string		&ref = str;
+	weight = 1.5;
+	qi = 100;
+}
 
-	std::cout << "Using the pointer...\n" << *ptr << std::endl;
-	std::cout << "Using the reference...\n" << ref << std::endl;
+Brain::Brain(double b_weight, int b_qi)
+{
+	weight = b_weight;
+	qi = b_qi;
+}
+
+Brain::~Brain()
+{
+}
+
+std::string Brain::identify(void) const
+{
+	std::ostringstream address;
+	address << (void const *)this;
+	return address.str();
 }
