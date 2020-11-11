@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 21:59:45 by schene            #+#    #+#             */
-/*   Updated: 2020/11/11 11:37:20 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/11 12:57:55 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ Streams::Streams(std::string filename, std::string str1, std::string str2)
 		filename.append(".replace");
 		replace.open(filename);
 		if (!replace)
-			print_error(ER_CREATE);
+			std::cerr << ERROR << ER_CREATE << ENDL;
 	}
 	else
-		print_error(ER_OPEN);
+		std::cerr << ERROR << ER_OPEN << ENDL;
 	s1 = str1;
 	s2 = str2;
 	if (s1.empty() || s2.empty())
-		print_error(ER_EMPTY);
+		std::cerr << ERROR << ER_EMPTY << ENDL;
 	if (!file || !replace || s1.empty() || s2.empty())
 		error = 1;
 }

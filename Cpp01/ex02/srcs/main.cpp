@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:32:04 by schene            #+#    #+#             */
-/*   Updated: 2020/11/10 15:01:36 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/11 12:33:11 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		main()
 	Zombie 		*z2;
 	Zombie 		*z3;
 
-	std::cout << "Created in main from constructor... (allocated on the heap)\n";
+	std::cout << "Created in main from constructor... (allocated on the stack)\n";
 	z1.announce();
 
 	event1.setZombieType("runner");

@@ -6,11 +6,11 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/08 16:26:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/11 10:13:10 by schene           ###   ########.fr        #
+#    Updated: 2020/11/11 12:58:44 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= srcs/main.cpp srcs/error.cpp srcs/Streams.cpp
+SRCS		= srcs/main.cpp srcs/Streams.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
