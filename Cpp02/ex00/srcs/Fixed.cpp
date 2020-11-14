@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 12:56:14 by schene            #+#    #+#             */
-/*   Updated: 2020/11/13 15:16:29 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/13 21:18:36 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ Fixed::~Fixed()
 	return ;
 }
 
-Fixed&	Fixed::operator=(Fixed const &rhs)
+Fixed&	Fixed::operator=(Fixed const &fix)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	if (this != &rhs)
-		this->_value = rhs.getRawBits();
+	if (this != &fix)
+		this->_value = fix.getRawBits();
 	
 	return *this;
 }

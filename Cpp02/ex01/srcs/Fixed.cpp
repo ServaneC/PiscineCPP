@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 12:56:14 by schene            #+#    #+#             */
-/*   Updated: 2020/11/13 18:15:40 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/13 21:35:34 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ Fixed::~Fixed()
 	return ;
 }
 
-Fixed&	Fixed::operator=(Fixed const &rhs)
+Fixed&	Fixed::operator=(Fixed const &fix)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	if (this != &rhs)
-		this->_value = rhs.getRawBits();
+	if (this != &fix)
+		this->_value = fix.getRawBits();
 	
 	return *this;
 }
@@ -76,8 +76,8 @@ int		Fixed::toInt( void ) const
 }
 
 
-std::ostream&	operator<<(std::ostream & o, Fixed const & rhs)
+std::ostream&	operator<<(std::ostream & o, Fixed const & fix)
 {
-	o << rhs.toFloat();
+	o << fix.toFloat();
 	return o;
 }

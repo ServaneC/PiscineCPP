@@ -6,7 +6,7 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/08 16:26:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/13 21:33:58 by schene           ###   ########.fr        #
+#    Updated: 2020/11/13 21:34:35 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJS		= ${SRCS:.cpp=.o}
 
 RM			= rm -f
 
-NAME		= ex01
+NAME		= ex02
 
 CC			= clang++
 
@@ -26,8 +26,7 @@ all:		${NAME}
 
 ${NAME}:	${OBJS}
 			@${CC} ${CFLAGS} -o ${NAME} ${OBJS}
-			@echo "✅ \033[32mCompilation Done, ./ex01 created.\033[0m"
-			@echo "👉 \033[33mTo check output run: ./ex01 > my_log;diff expected_output my_log\033[0m"
+			@echo "✅ \033[32mCompilation Done, ./ex02 created.\033[0m"
 
 %.o: %.cpp
 			@${CC} ${CFLAGS} -c $< -o $@
