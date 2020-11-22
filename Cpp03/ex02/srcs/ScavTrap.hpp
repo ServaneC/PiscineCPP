@@ -6,16 +6,13 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 12:02:12 by schene            #+#    #+#             */
-/*   Updated: 2020/11/21 19:02:22 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 01:04:54 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-# include <iostream>
-# include <cstdlib>
-# include <string>
 # include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
@@ -29,6 +26,8 @@ class ScavTrap : public ClapTrap
 		~ScavTrap();
 		ScavTrap	&operator=(ScavTrap const &rhs);
 
+		int		rangedAttack(std::string const & target);
+		int 	meleeAttack(std::string const & target);
 		void	challengeNewcomer(std::string const & target);
 };
 

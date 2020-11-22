@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:42:06 by schene            #+#    #+#             */
-/*   Updated: 2020/11/21 19:02:27 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 01:04:02 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,20 @@ FragTrap	&FragTrap::operator=(FragTrap const &rhs)
 	}
 	std::cout << BLUE << "👴 A grandpa named " << name << " came out of his room." << END << std::endl;
 	return *this;
+}
+
+int		FragTrap::rangedAttack(std::string const & target)
+{
+	std::cout << CYAN << "Grandpa " << name << " throw his scrabble game on " << target 
+		<< " from a distance, causing " << ranged_dmg << " points of damage!" << END << std::endl;
+	return (ranged_dmg);
+}
+
+int 	FragTrap::meleeAttack(std::string const & target)
+{
+	std::cout << CYAN << "Grandpa "<< name << " hit " << target << " with his cane, causing " <<
+		 melee_dmg << " points of damage!" << END << std::endl;
+	return(melee_dmg);
 }
 
 int		FragTrap::vaulthunter_dot_exe(std::string const & target)

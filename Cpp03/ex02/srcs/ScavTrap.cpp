@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 12:07:58 by schene            #+#    #+#             */
-/*   Updated: 2020/11/21 18:58:30 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 01:10:33 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,20 @@ ScavTrap	&ScavTrap::operator=(ScavTrap const &rhs)
 	}
 	std::cout << BLUE << "👵 A grandma named " << name << " came out of her room." << END << std::endl;
 	return *this;
+}
+
+int		ScavTrap::rangedAttack(std::string const & target)
+{
+	std::cout << CYAN << "Grandma " << name << " throw a card game on " << target << " from a distance, causing " <<
+		 ranged_dmg << " points of damage!" << END << std::endl;
+	return (ranged_dmg);
+}
+	
+int 	ScavTrap::meleeAttack(std::string const & target)
+{
+	std::cout << CYAN << "Grandma " << name << " has tripped up " << target << ", causing " <<
+		 melee_dmg << " points of damage!" << END << std::endl;
+	return(melee_dmg);
 }
 
 void	ScavTrap::challengeNewcomer(std::string const & target)

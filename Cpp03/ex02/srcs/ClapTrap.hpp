@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 15:52:01 by schene            #+#    #+#             */
-/*   Updated: 2020/11/21 19:04:49 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 00:23:37 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CLAPTRAP_HPP
 
 # include <iostream>
+# include <string>
 # include <cstdlib>
 
 # define RED "\033[0;31m💤 "

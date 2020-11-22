@@ -6,16 +6,13 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:38:41 by schene            #+#    #+#             */
-/*   Updated: 2020/11/21 19:02:32 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 01:02:49 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
-# include <iostream>
-# include <cstdlib>
-# include <string>
 # include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap
@@ -29,6 +26,8 @@ class FragTrap : public ClapTrap
 		~FragTrap();
 		FragTrap	&operator=(FragTrap const &rhs);
 
+		int		rangedAttack(std::string const & target);
+		int 	meleeAttack(std::string const & target);
 		int		vaulthunter_dot_exe(std::string const & target);
 };
 
