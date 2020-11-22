@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:02:32 by schene            #+#    #+#             */
-/*   Updated: 2020/11/21 18:58:18 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 23:09:10 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ void		ClapTrap::print_hp_energy(int print)
 		std::cout << GREY << name << " energy is now " << energy << "/" << max_energy << END << std::endl;
 	else
 		std::cout << GREY << name << " HP is " << hit_pts << "/" << max_hit_pts << 
-		" and his energy is " << energy << "/" << max_energy << END << std::endl;
+		" and its energy is " << energy << "/" << max_energy << END << std::endl;
 }
 
 std::string const	ClapTrap::rand_action(const std::string *quotes, \

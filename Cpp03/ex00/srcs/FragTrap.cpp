@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:42:06 by schene            #+#    #+#             */
-/*   Updated: 2020/11/20 20:19:51 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 23:25:24 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,5 @@ void		FragTrap::print_hp_energy(int print)
 		std::cout << GREY << name << " energy is now " << energy << "/" << max_energy << END << std::endl;
 	else
 		std::cout << GREY << name << " HP is " << hit_pts << "/" << max_hit_pts << 
-		" and his energy is " << energy << "/" << max_energy << END << std::endl;
-	std::cout << std::endl;
-
+		" and its energy is " << energy << "/" << max_energy << END << std::endl;
 }

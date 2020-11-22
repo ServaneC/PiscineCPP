@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 12:02:12 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 23:31:14 by schene           ###   ########.fr       */
+/*   Created: 2020/11/21 15:52:01 by schene            #+#    #+#             */
+/*   Updated: 2020/11/22 12:08:50 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <iostream>
-# include <cstdlib>
 # include <string>
+# include <cstdlib>
 
-# define S_GREEN "\033[0;92m💪 "
-# define S_MAG "\033[0;95m😞 "
-# define S_CYAN "\033[0;96m"
-# define S_BLUE "\033[0;94m👵 "
-# define S_YELLOW "\033[0;93m⚔️ "
-# define S_GREY "\033[0;90m🔋 "
+# define RED "\033[0;31m💤 "
+# define D_GREEN "\033[0;32m🥣 The nurse "
+# define GREEN "\033[0;92m💪 "
+# define MAG "\033[0;95m😞 "
+# define CYAN "\033[0;96m👉 "
+# define BLUE "\033[0;94m"
+# define YELLOW "\033[0;93m⚔️ "
+# define GREY "\033[0;90m🔋 "
 # define END "\033[0m"
 
 # define HP 1
 # define EN 2
 # define HPEN 3
 
-class ScavTrap
+class ClapTrap
 {
-	private:
-		ScavTrap();
+	protected:
 		int			hit_pts;
 		int			max_hit_pts;
 		int			energy;
@@ -41,21 +42,22 @@ class ScavTrap
 		int			melee_dmg;
 		int			ranged_dmg;
 		int			armordmg_red;
-		void		print_hp_energy(int print);
 
 	public:
-		ScavTrap(std::string r_name);
-		ScavTrap(const ScavTrap &to_copy);
-		~ScavTrap();
-		ScavTrap	&operator=(ScavTrap const &rhs);
-
-		std::string	name;
-
+		ClapTrap();
+		ClapTrap(int hp, int mxhp, int nrj, int mxnrj, int lvl, int meldmg, \
+			int rgddmg, int armred, std::string r_name);
+		ClapTrap(const ClapTrap &to_copy);
+		~ClapTrap();
+		ClapTrap	&operator=(ClapTrap const &rhs);
+		
 		int 	rangedAttack(std::string const & target);
 		int 	meleeAttack(std::string const & target);
 		void 	takeDamage(unsigned int amount);
 		void 	beRepaired(unsigned int amount);
-		void	challengeNewcomer(std::string const & target);
+		void	print_hp_energy(int print);
+		std::string const	rand_action(const std::string *quotes, unsigned int const arraysize);
+		std::string	name;
 };
 
 #endif

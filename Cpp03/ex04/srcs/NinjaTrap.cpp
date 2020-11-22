@@ -6,28 +6,34 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 00:33:23 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 23:37:01 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 23:21:09 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "NinjaTrap.hpp"
 
+NinjaTrap::NinjaTrap() : ClapTrap(60, 60, 120, 120, 1, 60, 5, 0, "default")
+{
+	std::cout << BLUE << "👩 A nurse came to see if everything is ok" << END << std::endl;
+	print_hp_energy(HPEN);
+}
+
 NinjaTrap::NinjaTrap(std::string r_name) : ClapTrap(60, 60, 120, 120, 1, 60, 5, 0, r_name)
 {
-	std::cout << BLUE << "👩‍⚕️ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
+	std::cout << BLUE << "👩‍ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
 	print_hp_energy(HPEN);
 }
 
 NinjaTrap::NinjaTrap(const NinjaTrap &to_copy)
 {
-	std::cout << BLUE << "👩‍⚕️ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
+	std::cout << BLUE << "👩‍ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
 	*this = to_copy;
 	return;
 }
 
 NinjaTrap::~NinjaTrap()
 {
-	std::cout << BLUE << "👩‍⚕️ " << name << " the nurse, left the room." << END << std::endl;
+	std::cout << BLUE << "👩‍ " << name << " the nurse, left the room." << END << std::endl;
 	print_hp_energy(HPEN);
 	return;
 }
@@ -45,7 +51,7 @@ NinjaTrap	&NinjaTrap::operator=(NinjaTrap const &rhs)
 		this->ranged_dmg = rhs.ranged_dmg;
 		this->armordmg_red = rhs.armordmg_red;
 	}
-	std::cout << BLUE << "👩‍⚕️ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
+	std::cout << BLUE << "👩‍ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
 	return *this;
 }
 
@@ -100,7 +106,7 @@ void		NinjaTrap::ninjaShoebox(ScavTrap & grandma)
 		std::cout << grandma.name << " found it, evreything is ok !" << END << std::endl;
 	else
 	{
-		std::cout << grandma.name << " couldn't find it, and threw a temper tantrum !" << END << std::endl;
+		std::cout << MAG << grandma.name << " couldn't find it, and threw a temper tantrum !" << END << std::endl;
 		grandma.takeDamage(10);
 	}
 }

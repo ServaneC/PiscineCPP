@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 12:07:58 by schene            #+#    #+#             */
-/*   Updated: 2020/11/21 18:09:45 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 23:29:26 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,14 @@ ScavTrap	&ScavTrap::operator=(ScavTrap const &rhs)
 				
 int		ScavTrap::rangedAttack(std::string const & target)
 {
-	std::cout << S_CYAN << "Grandma " << name << " throw a card game on " << target << " causing " <<
+	std::cout << S_CYAN << "🃏 Grandma " << name << " throw a card game on " << target << " causing " <<
 		 ranged_dmg << " points of damage!" << END << std::endl;
 	return (ranged_dmg);
 }
 	
 int 	ScavTrap::meleeAttack(std::string const & target)
 {
-	std::cout << S_CYAN << "Grandma " << name << " has tripped up " << target << ", causing " <<
+	std::cout << S_CYAN << "🤜 Grandma " << name << " has tripped up " << target << ", causing " <<
 		 melee_dmg << " points of damage!" << END << std::endl;
 	return(melee_dmg);
 }
@@ -116,5 +116,4 @@ void		ScavTrap::print_hp_energy(int print)
 	else
 		std::cout << S_GREY << name << " HP is " << hit_pts << "/" << max_hit_pts << 
 		" and her energy is " << energy << "/" << max_energy << END << std::endl;
-	std::cout << std::endl;
 }

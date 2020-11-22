@@ -6,31 +6,30 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:41:59 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 23:24:26 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 23:20:15 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int main()
 {
 	FragTrap jp("Jean-Pierre");
-	ScavTrap gm("Bernadette");
-	int damage;
+	NinjaTrap nurse("Sylvie");
+	SuperTrap alliance("SuperOld");
 
-	if ((damage = jp.vaulthunter_dot_exe(gm.name)))
-		gm.takeDamage(damage);
-	if ((damage = jp.vaulthunter_dot_exe(gm.name)))
-		gm.takeDamage(damage);
-	if ((damage = jp.vaulthunter_dot_exe(gm.name)))
-		gm.takeDamage(damage);
-	gm.beRepaired(50);
-	jp.takeDamage(gm.meleeAttack(jp.name));
-	jp.takeDamage(gm.rangedAttack(jp.name));
-	gm.challengeNewcomer(jp.name);
-	gm.challengeNewcomer(jp.name);
-	gm.challengeNewcomer(jp.name);
-	gm.challengeNewcomer(jp.name);
+	int damage;
+	nurse.takeDamage(alliance.rangedAttack(nurse.name));
+	jp.takeDamage(alliance.meleeAttack(jp.name));
+	if ((damage = alliance.vaulthunter_dot_exe(nurse.name)))
+		nurse.takeDamage(damage);
+	if ((damage = alliance.vaulthunter_dot_exe(jp.name)))
+		jp.takeDamage(damage);
+	alliance.beRepaired(30);
+	alliance.ninjaShoebox(jp);
+	alliance.ninjaShoebox(nurse);
 	return (1);
 }
