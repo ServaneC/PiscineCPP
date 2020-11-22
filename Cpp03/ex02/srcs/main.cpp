@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:41:59 by schene            #+#    #+#             */
-/*   Updated: 2020/11/20 20:20:56 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/22 12:52:09 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,29 @@
 
 int main()
 {
-	FragTrap fg1("Jean-Pierre");
-	FragTrap fg2("Denis");
-	ScavTrap st1("Bernadette");
+	FragTrap jp("Jean-Pierre");
+	FragTrap denis("Denis");
+	ScavTrap gm("Bernadette");
 	int damage;
 
-	if ((damage = fg2.vaulthunter_dot_exe(st1.name)))
-		st1.takeDamage(damage);
-	if ((damage = fg2.vaulthunter_dot_exe(fg1.name)))
-		fg1.takeDamage(damage);
-	if ((damage = fg2.vaulthunter_dot_exe(fg1.name)))
-		fg1.takeDamage(damage);
-	if ((damage = fg2.vaulthunter_dot_exe(st1.name)))
-		st1.takeDamage(damage);
-	if ((damage = fg2.vaulthunter_dot_exe(fg1.name)))
-		fg1.takeDamage(damage);
-	st1.beRepaired(50);
-	fg2.takeDamage(fg1.meleeAttack(fg2.name));
-	fg2.takeDamage(fg1.rangedAttack(fg2.name));
-	st1.challengeNewcomer(fg1.name);
-	st1.challengeNewcomer(fg2.name);
-	st1.challengeNewcomer(fg1.name);
-	st1.challengeNewcomer(fg2.name);
-	st1.challengeNewcomer(fg1.name);
-	st1.challengeNewcomer(fg2.name);
+	if ((damage = denis.vaulthunter_dot_exe(gm.name)))
+		gm.takeDamage(damage);
+	if ((damage = denis.vaulthunter_dot_exe(jp.name)))
+		jp.takeDamage(damage);
+	if ((damage = denis.vaulthunter_dot_exe(jp.name)))
+		jp.takeDamage(damage);
+	if ((damage = denis.vaulthunter_dot_exe(gm.name)))
+		gm.takeDamage(damage);
+	if ((damage = denis.vaulthunter_dot_exe(jp.name)))
+		jp.takeDamage(damage);
+	gm.beRepaired(50);
+	denis.takeDamage(jp.meleeAttack(denis.name));
+	denis.takeDamage(jp.rangedAttack(denis.name));
+	gm.challengeNewcomer(jp.name);
+	gm.challengeNewcomer(denis.name);
+	gm.challengeNewcomer(jp.name);
+	gm.challengeNewcomer(denis.name);
+	gm.challengeNewcomer(jp.name);
+	gm.challengeNewcomer(denis.name);
 	return (1);
 }
