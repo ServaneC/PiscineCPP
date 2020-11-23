@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 00:33:23 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 23:37:01 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 20:54:45 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ NinjaTrap::NinjaTrap(std::string r_name) : ClapTrap(60, 60, 120, 120, 1, 60, 5, 
 	print_hp_energy(HPEN);
 }
 
-NinjaTrap::NinjaTrap(const NinjaTrap &to_copy)
+NinjaTrap::NinjaTrap(const NinjaTrap &to_copy) : ClapTrap(to_copy)
 {
-	std::cout << BLUE << "👩‍⚕️ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
 	*this = to_copy;
+	std::cout << BLUE << "👩‍⚕️ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
 	return;
 }
 

@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 12:07:58 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 01:10:33 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 20:54:22 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ ScavTrap::ScavTrap(std::string r_name) : ClapTrap(100, 100, 50, 50, 1, 20, 15, 3
 	print_hp_energy(HPEN);
 }
 
-ScavTrap::ScavTrap(const ScavTrap &to_copy)
+ScavTrap::ScavTrap(const ScavTrap &to_copy) : ClapTrap(to_copy)
 {
-	std::cout << BLUE << "👵 A grandma named " << name << " enter the room." << END << std::endl;
 	*this = to_copy;
+	std::cout << BLUE << "👵 A grandma named " << name << " enter the room." << END << std::endl;
 	return;
 }
 

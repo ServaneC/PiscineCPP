@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 14:33:47 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 15:42:44 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 20:58:17 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ FragTrap(), NinjaTrap()
 	print_hp_energy(HPEN);
 }
 
-SuperTrap::SuperTrap(const SuperTrap &to_copy)
+SuperTrap::SuperTrap(const SuperTrap &to_copy) : ClapTrap(to_copy)
 {
 	*this = to_copy;
 	std::cout << BLUE << "🤝 A grandpa and a nurse joined forces to create an alliance named " << this->name << END << std::endl;

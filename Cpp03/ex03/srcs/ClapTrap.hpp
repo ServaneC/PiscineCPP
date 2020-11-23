@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 15:52:01 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 15:23:45 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 20:49:24 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <cstdlib>
 
 # define RED "\033[0;31m💤 "
-# define D_GREEN "\033[0;32m🥣 The nurse "
+# define D_GREEN "\033[0;32m🙂 The nurse "
 # define GREEN "\033[0;92m💪 "
 # define MAG "\033[0;95m😞 "
 # define CYAN "\033[0;96m👉 "
@@ -34,6 +34,7 @@
 class ClapTrap
 {
 	protected:
+		ClapTrap();
 		int			hit_pts;
 		int			max_hit_pts;
 		int			energy;
@@ -44,7 +45,6 @@ class ClapTrap
 		int			armordmg_red;
 
 	public:
-		ClapTrap();
 		ClapTrap(int hp, int mxhp, int nrj, int mxnrj, int lvl, int meldmg, \
 			int rgddmg, int armred, std::string r_name);
 		ClapTrap(const ClapTrap &to_copy);

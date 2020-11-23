@@ -6,35 +6,30 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:02:32 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 15:18:58 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 20:50:58 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
-ClapTrap::ClapTrap()
-{
-	std::cout << "🔆 Someone in the Retirement Home just woke up..." << std::endl;
-}
 
 ClapTrap::ClapTrap(int hp, int mxhp, int nrj, int mxnrj, int lvl, int meldmg,
 int rgddmg, int armred, std::string r_name) : hit_pts(hp), max_hit_pts(mxhp), 
 energy(nrj), max_energy(mxnrj), level(lvl), melee_dmg(meldmg), ranged_dmg(rgddmg),
 armordmg_red(armred), name(r_name)
 {
-	std::cout << "🔆 Someone in the Retirement Home just woke up..." << std::endl;
+	std::cout << "🔆 " << name << " just woke up..." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &to_copy)
 {
-	std::cout << "🔆 Someone in the Retirement Home just woke up..." << std::endl;
 	*this = to_copy;
+	std::cout << "🔆 " << name << " just woke up..." << std::endl;
 	return;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "🌙 Someone in the Retirement Home just fell asleep." << std::endl;
+	std::cout << "🌙 " << name << " just fell asleep..." << std::endl;
 	return;
 }
 
@@ -50,8 +45,9 @@ ClapTrap	&ClapTrap::operator=(ClapTrap const &rhs)
 		this->melee_dmg = rhs.melee_dmg;
 		this->ranged_dmg = rhs.ranged_dmg;
 		this->armordmg_red = rhs.armordmg_red;
+		this->name = rhs.name;
 	}
-	std::cout << "🔆 Someone in the Retirement Home just woke up..." << std::endl;
+	std::cout << "🔆 " << name << " just woke up..." << std::endl;
 	return *this;
 }
 
