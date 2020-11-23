@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 00:33:23 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 20:54:45 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 21:03:25 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 NinjaTrap::NinjaTrap(std::string r_name) : ClapTrap(60, 60, 120, 120, 1, 60, 5, 0, r_name)
 {
-	std::cout << BLUE << "👩‍⚕️ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
+	std::cout << BLUE << "👩 A nurse named " << name << " came to see if everything is ok" << END << std::endl;
 	print_hp_energy(HPEN);
 }
 
 NinjaTrap::NinjaTrap(const NinjaTrap &to_copy) : ClapTrap(to_copy)
 {
 	*this = to_copy;
-	std::cout << BLUE << "👩‍⚕️ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
+	std::cout << BLUE << "👩 A nurse named " << name << " came to see if everything is ok" << END << std::endl;
 	return;
 }
 
 NinjaTrap::~NinjaTrap()
 {
-	std::cout << BLUE << "👩‍⚕️ " << name << " the nurse, left the room." << END << std::endl;
+	std::cout << BLUE << "👩 " << name << " the nurse, left the room." << END << std::endl;
 	print_hp_energy(HPEN);
 	return;
 }
@@ -45,7 +45,7 @@ NinjaTrap	&NinjaTrap::operator=(NinjaTrap const &rhs)
 		this->ranged_dmg = rhs.ranged_dmg;
 		this->armordmg_red = rhs.armordmg_red;
 	}
-	std::cout << BLUE << "👩‍⚕️ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
+	std::cout << BLUE << "👩 A nurse named " << name << " came to see if everything is ok" << END << std::endl;
 	return *this;
 }
 

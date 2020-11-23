@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sorcerer.hpp                                       :+:      :+:    :+:   */
+/*   Toad.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 15:48:52 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 00:01:01 by schene           ###   ########.fr       */
+/*   Created: 2020/11/23 23:49:03 by schene            #+#    #+#             */
+/*   Updated: 2020/11/24 00:01:07 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SORCERER_HPP
-# define SORCERER_HPP
+#ifndef TOAD_HPP
+# define TOAD_HPP
 
 # include <iostream>
 # include "Victim.hpp"
 
-class Sorcerer
+class Toad : public Victim
 {
 	private:
-		Sorcerer();
+		Toad();
 
 	public:
-		Sorcerer(std::string const s_name, std::string const s_title);
-		Sorcerer(const Sorcerer & to_copy);
-		virtual ~Sorcerer();
+		Toad(std::string s_name);
+		Toad(const Toad & to_copy);
+		virtual ~Toad();
 
-		std::string		name;
-		std::string		title;
-
-		Sorcerer	&	operator=(Sorcerer const & rhs);
-		void 			polymorph(Victim const &) const;
+		virtual void	getPolymorphed() const;
+		Toad	&		operator=(Toad const & rhs);
 };
-
-std::ostream	&operator<<(std::ostream & o, const Sorcerer &rhs);
 
 #endif

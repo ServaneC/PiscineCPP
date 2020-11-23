@@ -6,11 +6,12 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 15:00:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/23 18:41:54 by schene           ###   ########.fr        #
+#    Updated: 2020/11/23 23:54:50 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= srcs/main.cpp srcs/Sorcerer.cpp srcs/Victim.cpp srcs/Peon.cpp
+SRCS		= srcs/main.cpp srcs/Sorcerer.cpp srcs/Victim.cpp srcs/Peon.cpp \
+				srcs/Witch.cpp srcs/Toad.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 

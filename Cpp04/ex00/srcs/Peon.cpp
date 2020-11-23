@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:53:37 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 20:41:37 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 23:34:22 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,29 @@
 
 Peon::Peon(std::string s_name) : Victim(s_name)
 {
-	std::cout << "Zog zog." << std::endl;
+	std::cout << GREEN << "Zog zog." << END << std::endl;
 }
 
 Peon::Peon(const Peon & to_copy) : Victim(to_copy)
 {
 	*this = to_copy;
-	std::cout << "Zog zog." << std::endl;
+	std::cout << GREEN << "Zog zog." << END << std::endl;
 }
+
+Peon	&		Peon::operator=(Peon const & rhs)
+{
+	if (this != &rhs)
+		this->name = rhs.name;
+	return *this;
+}
+
 
 void	Peon::getPolymorphed() const
 {
-	std::cout << name << " has been turned into a pink pony!" << std::endl;
+	std::cout << YELLOW << "🦄 " << name << " has been turned into a pink pony!" << END << std::endl;
 }
 
 Peon::~Peon()
 {
-	std::cout << "Bleuark..." << std::endl;
+	std::cout << GREEN << "Bleuark..." << END << std::endl;
 }
