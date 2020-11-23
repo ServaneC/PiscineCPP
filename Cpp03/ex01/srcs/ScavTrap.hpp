@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 12:02:12 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 23:31:14 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 14:23:17 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,15 @@ class ScavTrap
 {
 	private:
 		ScavTrap();
-		int			hit_pts;
-		int			max_hit_pts;
-		int			energy;
-		int			max_energy;
-		int			level;
-		int			melee_dmg;
-		int			ranged_dmg;
-		int			armordmg_red;
-		void		print_hp_energy(int print);
+		int			_hit_pts;
+		int			_max_hit_pts;
+		int			_energy;
+		int			_max_energy;
+		int			_level;
+		int			_melee_dmg;
+		int			_ranged_dmg;
+		int			_armordmg_red;
+		void		_print_hp_energy(int print);
 
 	public:
 		ScavTrap(std::string r_name);

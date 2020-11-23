@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 15:52:01 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 11:59:15 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 14:26:52 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ class ClapTrap
 		int			melee_dmg;
 		int			ranged_dmg;
 		int			armordmg_red;
+
 	public:
 		ClapTrap();
 		ClapTrap(int hp, int mxhp, int nrj, int mxnrj, int lvl, int meldmg, \

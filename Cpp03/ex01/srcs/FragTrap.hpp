@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:38:41 by schene            #+#    #+#             */
-/*   Updated: 2020/11/20 11:09:33 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 14:22:05 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ class FragTrap
 {
 	private:
 		FragTrap();
-		int			hit_pts;
-		int			max_hit_pts;
-		int			energy;
-		int			max_energy;
-		int			level;
-		int			melee_dmg;
-		int			ranged_dmg;
-		int			armordmg_red;
-		void		print_hp_energy(int print);
+		int			_hit_pts;
+		int			_max_hit_pts;
+		int			_energy;
+		int			_max_energy;
+		int			_level;
+		int			_melee_dmg;
+		int			_ranged_dmg;
+		int			_armordmg_red;
+		void		_print_hp_energy(int print);
 
 	public:
 		FragTrap(std::string r_name);
