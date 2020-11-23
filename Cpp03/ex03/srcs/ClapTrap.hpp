@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 15:52:01 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 12:08:50 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 12:00:49 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,7 @@ class ClapTrap
 		ClapTrap(const ClapTrap &to_copy);
 		~ClapTrap();
 		ClapTrap	&operator=(ClapTrap const &rhs);
-		
-		int 	rangedAttack(std::string const & target);
-		int 	meleeAttack(std::string const & target);
+
 		void 	takeDamage(unsigned int amount);
 		void 	beRepaired(unsigned int amount);
 		void	print_hp_energy(int print);

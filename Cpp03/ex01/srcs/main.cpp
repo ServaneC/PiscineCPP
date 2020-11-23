@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:41:59 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 23:24:26 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 12:09:30 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main()
 	ScavTrap gm("Bernadette");
 	int damage;
 
+	srand (time(NULL));
 	if ((damage = jp.vaulthunter_dot_exe(gm.name)))
 		gm.takeDamage(damage);
 	if ((damage = jp.vaulthunter_dot_exe(gm.name)))

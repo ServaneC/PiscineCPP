@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:41:59 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 12:51:49 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 12:09:20 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main()
 	FragTrap denis("Denis");
 	int damage;
 
+	srand (time(NULL));
 	if ((damage = denis.vaulthunter_dot_exe(jp.name)))
 		jp.takeDamage(damage);
 	if ((damage = denis.vaulthunter_dot_exe(jp.name)))

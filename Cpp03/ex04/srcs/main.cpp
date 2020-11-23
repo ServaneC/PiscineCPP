@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:41:59 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 23:20:15 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 12:10:09 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ int main()
 	FragTrap jp("Jean-Pierre");
 	NinjaTrap nurse("Sylvie");
 	SuperTrap alliance("SuperOld");
-
 	int damage;
+	srand (time(NULL));
+
 	nurse.takeDamage(alliance.rangedAttack(nurse.name));
 	jp.takeDamage(alliance.meleeAttack(jp.name));
 	if ((damage = alliance.vaulthunter_dot_exe(nurse.name)))
