@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:02:32 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 12:01:14 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/23 15:23:29 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,20 @@ ClapTrap	&ClapTrap::operator=(ClapTrap const &rhs)
 	}
 	std::cout << "🔆 Someone in the Retirement Home just woke up..." << std::endl;
 	return *this;
+}
+
+int		ClapTrap::rangedAttack(std::string const & target)
+{
+	std::cout << CYAN << name << " attack " << target << " from a distance, causing " <<
+		 ranged_dmg << " points of damage!" << END << std::endl;
+	return (ranged_dmg);
+}
+	
+int 	ClapTrap::meleeAttack(std::string const & target)
+{
+	std::cout << CYAN << name << " attack " << target << " from close, causing " <<
+		 melee_dmg << " points of damage!" << END << std::endl;
+	return(melee_dmg);
 }
 
 void 	ClapTrap::takeDamage(unsigned int amount)
