@@ -6,14 +6,12 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 15:00:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/24 23:53:49 by schene           ###   ########.fr        #
+#    Updated: 2020/11/24 16:51:02 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= srcs/main.cpp srcs/AWeapon.cpp  srcs/PlasmaRifle.cpp \
-				srcs/PowerFist.cpp srcs/Enemy.cpp srcs/Character.cpp \
-				srcs/SuperMutant.cpp srcs/RadScorpion.cpp \
-				srcs/PoisonSpray.cpp srcs/GiantSpider.cpp
+SRCS		= srcs/main.cpp srcs/Squad.cpp srcs/TacticalMarine.cpp \
+				srcs/AssaultTerminator.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 

@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.cpp                                    :+:      :+:    :+:   */
+/*   GiantSpider.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 13:46:01 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 23:37:55 by schene           ###   ########.fr       */
+/*   Created: 2020/11/24 23:56:55 by schene            #+#    #+#             */
+/*   Updated: 2020/11/25 00:03:16 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RadScorpion.hpp"
+#include "GiantSpider.hpp"
 
-RadScorpion::RadScorpion() : Enemy(80, "RadScorpion")
+GiantSpider::GiantSpider() : Enemy(30, "GiantSpider")
 {
-	std::cout << "* click click click *" << std::endl;
+	std::cout << "* tip tappy tip *" << std::endl;
 }
 
-RadScorpion::RadScorpion(RadScorpion const & to_copy) : Enemy(to_copy)
+GiantSpider::GiantSpider(GiantSpider const & to_copy) : Enemy(to_copy)
 {
 	*this = to_copy;
-	std::cout << "* click click click *" << std::endl;
+	std::cout << "* tip tappy tip *" << std::endl;
 }
 
-RadScorpion::~RadScorpion()
+GiantSpider::~GiantSpider()
 {
-	std::cout << "* SPROTCH *" << std::endl;
+	std::cout << "* squuuiiish *" << std::endl;
 }
 
-RadScorpion & RadScorpion::operator=(RadScorpion const & rhs)
+GiantSpider & GiantSpider::operator=(GiantSpider const & rhs)
 {
 	if (this != &rhs)
 		Enemy::operator=(rhs);
 	return *this;
 }
-

@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.cpp                                    :+:      :+:    :+:   */
+/*   PoisonSpray.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 13:46:01 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 23:37:55 by schene           ###   ########.fr       */
+/*   Created: 2020/11/24 23:55:24 by schene            #+#    #+#             */
+/*   Updated: 2020/11/25 00:03:51 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RadScorpion.hpp"
+#include "PoisonSpray.hpp"
 
-RadScorpion::RadScorpion() : Enemy(80, "RadScorpion")
+PoisonSpray::PoisonSpray() : AWeapon("Poison Spray", 2, 10)
 {
-	std::cout << "* click click click *" << std::endl;
+	return ;
 }
 
-RadScorpion::RadScorpion(RadScorpion const & to_copy) : Enemy(to_copy)
+PoisonSpray::PoisonSpray(const PoisonSpray & to_copy) : AWeapon(to_copy)
 {
 	*this = to_copy;
-	std::cout << "* click click click *" << std::endl;
+	return ;
 }
 
-RadScorpion::~RadScorpion()
+PoisonSpray::~PoisonSpray()
 {
-	std::cout << "* SPROTCH *" << std::endl;
 }
 
-RadScorpion & RadScorpion::operator=(RadScorpion const & rhs)
+PoisonSpray	&	PoisonSpray::operator=(PoisonSpray const & rhs)
 {
 	if (this != &rhs)
-		Enemy::operator=(rhs);
+		AWeapon::operator=(rhs);
 	return *this;
 }
 
+void			PoisonSpray::attack() const
+{
+	std::cout << MAG <<  "* pccchhhiiiiiiiiiiittttt pchiiiit*" << END << std::endl;
+}

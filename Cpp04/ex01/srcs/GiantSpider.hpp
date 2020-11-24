@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.hpp                                    :+:      :+:    :+:   */
+/*   GiantSpider.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 13:44:06 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 23:38:38 by schene           ###   ########.fr       */
+/*   Created: 2020/11/24 23:56:41 by schene            #+#    #+#             */
+/*   Updated: 2020/11/24 23:58:11 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RADSCORPION_HPP
-# define RADSCORPION_HPP
+#ifndef GIANTSPIDER_HPP
+# define GIANTSPIDER_HPP
 
 #include "Enemy.hpp"
 
-class RadScorpion : public Enemy
+class GiantSpider : public Enemy
 {
 	public:
-		RadScorpion();
-		RadScorpion(RadScorpion const & to_copy);
-		virtual ~RadScorpion();
+		GiantSpider();
+		GiantSpider(GiantSpider const & to_copy);
+		virtual ~GiantSpider();
 
-		RadScorpion & operator=(RadScorpion const & rhs);
+		GiantSpider & operator=(GiantSpider const & rhs);
 };
 
 #endif

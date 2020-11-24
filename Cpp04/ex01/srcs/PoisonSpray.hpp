@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.hpp                                    :+:      :+:    :+:   */
+/*   PoisonSpray.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 13:44:06 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 23:38:38 by schene           ###   ########.fr       */
+/*   Created: 2020/11/24 23:54:10 by schene            #+#    #+#             */
+/*   Updated: 2020/11/24 23:56:24 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RADSCORPION_HPP
-# define RADSCORPION_HPP
+#ifndef POISONSPRAY_HPP
+# define POISONSPRAY_HPP
 
-#include "Enemy.hpp"
+# include "AWeapon.hpp"
 
-class RadScorpion : public Enemy
+class PoisonSpray : public AWeapon
 {
 	public:
-		RadScorpion();
-		RadScorpion(RadScorpion const & to_copy);
-		virtual ~RadScorpion();
+		PoisonSpray();
+		PoisonSpray(const PoisonSpray & to_copy);
+		virtual ~PoisonSpray();
 
-		RadScorpion & operator=(RadScorpion const & rhs);
+		PoisonSpray	&	operator=(PoisonSpray const & rhs);
+		void			attack() const;
+
 };
+
 
 #endif
