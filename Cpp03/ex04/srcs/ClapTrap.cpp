@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:02:32 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 20:56:54 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/24 16:45:47 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ ClapTrap	&ClapTrap::operator=(ClapTrap const &rhs)
 		this->armordmg_red = rhs.armordmg_red;
 		this->name = rhs.name;
 	}
-	std::cout << "🔆 " << name << " just woke up..." << std::endl;
 	return *this;
 }
 

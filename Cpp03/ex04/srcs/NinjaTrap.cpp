@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 00:33:23 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 20:57:45 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/24 16:45:28 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,7 @@ NinjaTrap::~NinjaTrap()
 NinjaTrap	&NinjaTrap::operator=(NinjaTrap const &rhs)
 {
 	if (this != &rhs)
-	{
-		this->hit_pts = rhs.hit_pts;
-		this->max_hit_pts = rhs.max_hit_pts;
-		this->energy = rhs.energy;
-		this->max_energy = rhs.max_energy;
-		this->level = rhs.level;
-		this->melee_dmg = rhs.melee_dmg;
-		this->ranged_dmg = rhs.ranged_dmg;
-		this->armordmg_red = rhs.armordmg_red;
-	}
+		ClapTrap::operator=(rhs);
 	std::cout << BLUE << "👩‍ A nurse named " << name << " came to see if everything is ok" << END << std::endl;
 	return *this;
 }

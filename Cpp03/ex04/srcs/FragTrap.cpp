@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:42:06 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 20:57:28 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/24 16:45:41 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ FragTrap::FragTrap(std::string r_name) : ClapTrap(100, 100, 100, 100, 1, 30, 20,
 
 FragTrap::FragTrap(const FragTrap &to_copy) : ClapTrap(to_copy)
 {
-	std::cout << BLUE << "👴 A grandpa named " << name << " came out of his room." << END << std::endl;
 	*this = to_copy;
+	std::cout << BLUE << "👴 A grandpa named " << name << " came out of his room." << END << std::endl;
 	return;
 }
 
@@ -41,16 +41,7 @@ FragTrap::~FragTrap()
 FragTrap	&FragTrap::operator=(FragTrap const &rhs)
 {
 	if (this != &rhs)
-	{
-		this->hit_pts = rhs.hit_pts;
-		this->max_hit_pts = rhs.max_hit_pts;
-		this->energy = rhs.energy;
-		this->max_energy = rhs.max_energy;
-		this->level = rhs.level;
-		this->melee_dmg = rhs.melee_dmg;
-		this->ranged_dmg = rhs.ranged_dmg;
-		this->armordmg_red = rhs.armordmg_red;
-	}
+		ClapTrap::operator=(rhs);
 	std::cout << BLUE << "👴 A grandpa named " << name << " came out of his room." << END << std::endl;
 	return *this;
 }

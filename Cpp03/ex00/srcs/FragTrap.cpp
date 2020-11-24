@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:42:06 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 14:20:00 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/24 16:43:55 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ FragTrap::FragTrap(std::string r_name) : _hit_pts(100), _max_hit_pts(100), \
 FragTrap::FragTrap(const FragTrap &to_copy)
 {
 	*this = to_copy;
-	std::cout << BLUE << "A grandpa named " << name << " came out of his room." << END << std::endl;
 	return;
 }
 
