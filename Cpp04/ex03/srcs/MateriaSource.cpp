@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 18:04:53 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 23:05:32 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 23:56:39 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 MateriaSource::MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
-		this->_inventory[i] = nullptr;
+		this->_inventory[i] = NULL;
 }
 
 MateriaSource::MateriaSource(MateriaSource const & to_copy)
@@ -32,7 +32,7 @@ MateriaSource::~MateriaSource()
 	for (int i = 0; i < 4; i++)
 	{
 		delete this->_inventory[i];
-		this->_inventory[i] = nullptr;
+		this->_inventory[i] = NULL;
 	}
 }
 

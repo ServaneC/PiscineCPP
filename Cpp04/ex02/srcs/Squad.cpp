@@ -6,13 +6,13 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:05:16 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 12:51:42 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 23:56:39 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Squad.hpp"
 
-Squad::Squad() : _count(0), _units(nullptr)
+Squad::Squad() : _count(0), _units(NULL)
 {
 
 }
@@ -38,7 +38,7 @@ Squad::~Squad()
 			delete _units[i];
 		delete [] _units;
 	}
-	this->_units = nullptr;
+	this->_units = NULL;
 }
 
 Squad	&Squad::operator=(const Squad & rhs)
@@ -63,7 +63,7 @@ int				Squad::getCount() const
 ISpaceMarine*	Squad::getUnit(int n) const
 {
 	if (n >= this->_count || n < 0)
-		return nullptr;
+		return NULL;
 	return this->_units[n];
 }
 
