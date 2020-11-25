@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 12:11:16 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 15:25:36 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 09:18:23 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 class Character
 {
 	private:
-		std::string	name;
-		int			ap;
-		AWeapon		*weapon;
+		std::string	_name;
+		int			_ap;
+		AWeapon		*_weapon;
 
 	public:
 		Character(std::string const & name);

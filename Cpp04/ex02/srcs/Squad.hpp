@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:05:24 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 23:06:19 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 12:38:23 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 # define SQUAD_HPP
 
 #include "ISquad.hpp"
+#include <iostream>
 
 class Squad : public ISquad
 {
 	private:
-		int				count;
-		ISpaceMarine	**units;
+		int				_count;
+		ISpaceMarine	**_units;
 
 	public:
 		Squad();
 		Squad(const Squad & to_copy);
-		~Squad();
+		virtual ~Squad();
 
 		Squad	&operator=(const Squad & rhs);
 		virtual int getCount() const;
 		virtual ISpaceMarine* getUnit(int n) const;
 		virtual int push(ISpaceMarine*);
-
+		void 		clean_squad();
 };
 
 #endif

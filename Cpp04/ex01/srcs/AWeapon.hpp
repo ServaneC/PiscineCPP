@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 10:52:35 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 16:08:31 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 09:18:14 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ class AWeapon
 {
 	private:
 		AWeapon();
-		std::string	name;
-		int			dmg;
-		int			ap_cost;
+		std::string	_name;
+		int			_dmg;
+		int			_ap_cost;
 		
 	public:
 		AWeapon(std::string const & name, int apcost, int damage);

@@ -6,13 +6,14 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 13:47:44 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 16:36:14 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 09:20:42 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character(std::string const & name) : name(name), ap(40), weapon(NULL)
+Character::Character(std::string const & name) : 
+	_name(name), _ap(40), _weapon(NULL)
 {
 	return ;
 }
@@ -31,38 +32,38 @@ Character	&Character::operator=(Character const & rhs)
 {
 	if (this != &rhs)
 	{
-		this->name = rhs.name;
-		this->ap = rhs.ap;
-		this->weapon = rhs.weapon;
+		this->_name = rhs._name;
+		this->_ap = rhs._ap;
+		this->_weapon = rhs._weapon;
 	}
 	return *this;
 }
 
 void		Character::recoverAP()
 {
-	this->ap += 10;
-	if (this->ap > 40)
-		this->ap = 40;
+	this->_ap += 10;
+	if (this->_ap > 40)
+		this->_ap = 40;
 	return ;
 }
 
 void		Character::equip(AWeapon *weapon_ptr)
 {
-	this->weapon = weapon_ptr;
+	this->_weapon = weapon_ptr;
 	return;
 }
 
 void		Character::attack(Enemy *enemy)
 {
-	if (!this->weapon || enemy->getHP() <= 0)
+	if (!this->_weapon || enemy->getHP() <= 0)
 		return ;
-	else if ((this->ap - this->weapon->getAPCost()) >= 0)
+	else if ((this->_ap - this->_weapon->getAPCost()) >= 0)
 	{
-		this->ap -= this->weapon->getAPCost();
-		std::cout << YELLOW << this->name << " attacks " << enemy->getType() << 
-		" with a " << this->weapon->getName() << END << std::endl;
-		this->weapon->attack();
-		enemy->takeDamage(this->weapon->getDamage());
+		this->_ap -= this->_weapon->getAPCost();
+		std::cout << YELLOW << this->_name << " attacks " << enemy->getType() << 
+		" with a " << this->_weapon->getName() << END << std::endl;
+		this->_weapon->attack();
+		enemy->takeDamage(this->_weapon->getDamage());
 		if (enemy->getHP() <= 0)
 			delete enemy;
 	}
@@ -70,17 +71,17 @@ void		Character::attack(Enemy *enemy)
 
 std::string	Character::getName() const
 {
-	return this->name;
+	return this->_name;
 }
 
 int			Character::getAP() const
 {
-	return this->ap;
+	return this->_ap;
 }
 
 AWeapon		*Character::getWeapon() const
 {
-	return this->weapon;
+	return this->_weapon;
 }
 
 std::ostream	&operator<<(std::ostream &o, Character const &rhs)

@@ -6,13 +6,13 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 12:06:17 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 16:24:36 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 09:21:02 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Enemy.hpp"
 
-Enemy::Enemy(int hp, std::string const & type) : hp(hp), type(type)
+Enemy::Enemy(int hp, std::string const & type) : _hp(hp), _type(type)
 {
 	return ;
 }
@@ -32,26 +32,26 @@ Enemy	&Enemy::operator=(Enemy const & rhs)
 {
 	if (this != &rhs)
 	{
-		this->hp = rhs.hp;
-		this->type = rhs.type;
+		this->_hp = rhs._hp;
+		this->_type = rhs._type;
 	}
 	return *this;
 }
 
 std::string Enemy::getType() const
 {
-	return this->type;
+	return this->_type;
 }
 
 int 		Enemy::getHP() const
 {
-	return this->hp;
+	return this->_hp;
 }
 
 void		Enemy::takeDamage(int damage)
 {
 	if (damage >= 0)
-		this->hp -= damage;
+		this->_hp -= damage;
 	return ;
 }
 

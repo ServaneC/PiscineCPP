@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 12:12:07 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 16:24:45 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 09:18:28 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Enemy
 {
 	private:
 		Enemy();
-		int			hp;
-		std::string	type;
+		int			_hp;
+		std::string	_type;
 
 	public:
 		Enemy(int hp, std::string const & type);

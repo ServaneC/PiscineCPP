@@ -6,7 +6,7 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 15:00:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/24 16:51:02 by schene           ###   ########.fr        #
+#    Updated: 2020/11/25 00:31:50 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJS		= ${SRCS:.cpp=.o}
 
 RM			= rm -f
 
-NAME		= Wasteland
+NAME		= MarineSquad
 
 CC			= clang++
 
