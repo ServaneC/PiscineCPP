@@ -6,18 +6,18 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 15:00:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/25 13:49:39 by schene           ###   ########.fr        #
+#    Updated: 2020/11/25 13:50:20 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= srcs/main.cpp srcs/Squad.cpp srcs/TacticalMarine.cpp \
-				srcs/AssaultTerminator.cpp
+SRCS		= srcs/main.cpp srcs/AMateria.cpp srcs/Ice.cpp srcs/Cure.cpp \
+				srcs/Character.cpp srcs/MateriaSource.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
 RM			= rm -f
 
-NAME		= MarineSquad
+NAME		= BocalFantasy
 
 CC			= clang++
 

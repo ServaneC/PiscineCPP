@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 22:56:25 by schene            #+#    #+#             */
-/*   Updated: 2020/11/23 23:34:50 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 13:43:10 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ void		Witch::make_potion()
 
 std::ostream	&operator<<(std::ostream & o, const Witch &rhs)
 {
-	o << B_MAG << "I am " << rhs.name << ", " << rhs.title << ", the witch and i love making potions !" << END << std::endl;
+	o << B_MAG << "I am the witch " << rhs.name << ", " << rhs.title << ", and i love making potions !" << END << std::endl;
 	return o;
 }

@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:05:24 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 12:38:23 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 13:46:37 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ class Squad : public ISquad
 		virtual ~Squad();
 
 		Squad	&operator=(const Squad & rhs);
-		virtual int getCount() const;
-		virtual ISpaceMarine* getUnit(int n) const;
-		virtual int push(ISpaceMarine*);
-		void 		clean_squad();
+		virtual int 			getCount() const;
+		virtual ISpaceMarine*	getUnit(int n) const;
+		virtual int 			push(ISpaceMarine*);
+		void 					clean_squad();
 };
 
 #endif

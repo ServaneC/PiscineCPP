@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Witch.hpp                                          :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 22:58:31 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 13:42:40 by schene           ###   ########.fr       */
+/*   Created: 2020/11/25 15:30:59 by schene            #+#    #+#             */
+/*   Updated: 2020/11/25 22:09:12 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WITCH_HPP
-# define WITCH_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
-# include "Sorcerer.hpp"
+# include <iostream>
+# include "ICharacter.hpp"
 
-class Witch : public Sorcerer
+class Ice : public AMateria
 {
-	private:
-		Witch();
-
 	public:
-		Witch(std::string const s_name, std::string const s_title);
-		Witch(const Witch & to_copy);
-		virtual ~Witch();
+		Ice();
+		Ice(Ice const & to_copy);
+		~Ice();
 
-		Witch	&	operator=(Witch const & rhs);
-		void		make_potion();
+		Ice			&operator=(Ice const & rhs);
+		AMateria*	 clone() const;
+		void 		use(ICharacter& target);
 };
-
-std::ostream	&operator<<(std::ostream & o, const Witch &rhs);
 
 #endif

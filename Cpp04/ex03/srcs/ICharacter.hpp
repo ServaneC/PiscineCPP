@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Witch.hpp                                          :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 22:58:31 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 13:42:40 by schene           ###   ########.fr       */
+/*   Created: 2020/11/25 15:11:37 by schene            #+#    #+#             */
+/*   Updated: 2020/11/25 22:07:39 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WITCH_HPP
-# define WITCH_HPP
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
-# include "Sorcerer.hpp"
+# include "AMateria.hpp"
 
-class Witch : public Sorcerer
+class ICharacter
 {
-	private:
-		Witch();
-
 	public:
-		Witch(std::string const s_name, std::string const s_title);
-		Witch(const Witch & to_copy);
-		virtual ~Witch();
+		virtual ~ICharacter() {}
+		virtual std::string const & getName() const = 0;
+		virtual void 				equip(AMateria *m) = 0;
+		virtual void 				unequip(int idx) = 0;
+		virtual void 				use(int idx, ICharacter& target) = 0;
+};					
 
-		Witch	&	operator=(Witch const & rhs);
-		void		make_potion();
-};
-
-std::ostream	&operator<<(std::ostream & o, const Witch &rhs);
-
-#endif
+#endif				
