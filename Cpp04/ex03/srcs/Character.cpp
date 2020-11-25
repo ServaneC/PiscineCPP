@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 16:33:53 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 22:43:18 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/25 23:14:45 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ std::string const & Character::getName() const
 
 void 				Character::equip(AMateria *m)
 {
-	if (!m)
+	if (!m || m == 0)
 		return ;
 	int i = 0;
 	while (i < 4 && this->_inventory[i])
