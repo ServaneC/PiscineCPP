@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 00:26:47 by schene            #+#    #+#             */
-/*   Updated: 2020/11/22 14:37:38 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/26 10:13:44 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-class NinjaTrap : virtual public ClapTrap
+class NinjaTrap : public virtual ClapTrap
 {
 	public:
 		NinjaTrap();
