@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 13:47:44 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 09:20:42 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/27 13:37:51 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void		Character::equip(AWeapon *weapon_ptr)
 
 void		Character::attack(Enemy *enemy)
 {
-	if (!this->_weapon || enemy->getHP() <= 0)
+	if (!this->_weapon)
 		return ;
 	else if ((this->_ap - this->_weapon->getAPCost()) >= 0)
 	{
@@ -67,6 +67,7 @@ void		Character::attack(Enemy *enemy)
 		if (enemy->getHP() <= 0)
 			delete enemy;
 	}
+	return ;
 }
 
 std::string	Character::getName() const

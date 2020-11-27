@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 23:54:10 by schene            #+#    #+#             */
-/*   Updated: 2020/11/24 23:56:24 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/27 13:22:49 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class PoisonSpray : public AWeapon
 
 		PoisonSpray	&	operator=(PoisonSpray const & rhs);
 		void			attack() const;
-
 };
 
 

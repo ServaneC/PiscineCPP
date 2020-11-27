@@ -6,7 +6,7 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 15:00:16 by schene            #+#    #+#              #
-#    Updated: 2020/11/24 23:53:49 by schene           ###   ########.fr        #
+#    Updated: 2020/11/27 13:03:57 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,11 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 all:		${NAME}
 
 ${NAME}:	${OBJS}
-			@${CC} ${CFLAGS} -o ${NAME} ${OBJS}
+			${CC} ${CFLAGS} -o ${NAME} ${OBJS}
 			@echo "✅ \033[32mCompilation Done, ./$(NAME) created.\033[0m"
 
 %.o: %.cpp
-			@${CC} ${CFLAGS} -c $< -o $@
+			${CC} ${CFLAGS} -c $< -o $@
 
 clean:		
 			@${RM} ${OBJS}

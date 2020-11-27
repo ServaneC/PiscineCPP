@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:05:16 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 23:56:39 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/27 14:20:24 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,6 @@ Squad::Squad() : _count(0), _units(NULL)
 
 Squad::Squad(const Squad & to_copy)
 {
-	if (this->_count > 0)
-	{
-		for (int i = 0; i < this->_count; i++)
-			delete _units[i];
-		delete this->_units;
-	}
 	this->_count = to_copy._count;
 	for (int i = 0; i < this->_count; i++)
 		_units[i] = to_copy._units[i];

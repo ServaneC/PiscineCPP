@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:30:59 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 22:09:12 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/27 14:28:45 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Ice : public AMateria
 		~Ice();
 
 		Ice			&operator=(Ice const & rhs);
-		AMateria*	 clone() const;
+		AMateria*	clone() const;
 		void 		use(ICharacter& target);
 };
 

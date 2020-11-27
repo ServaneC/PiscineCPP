@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 12:06:17 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 09:21:02 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/27 13:34:23 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,11 @@ int 		Enemy::getHP() const
 void		Enemy::takeDamage(int damage)
 {
 	if (damage >= 0)
+	{
 		this->_hp -= damage;
+		if (this->_hp <= 0)
+			this->_hp = 0;
+	}	
 	return ;
 }
 

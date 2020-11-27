@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 14:20:04 by schene            #+#    #+#             */
-/*   Updated: 2020/11/25 00:22:53 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/27 13:34:30 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ int main()
 	me->attack(d);
 	std::cout << *me << *d;
 	std::cout << "(deleting everything left...)" << std::endl;
-	if (b->getHP() >= 0)
+	if (b->getHP() > 0)
 		delete b;
-	if (c->getHP() >= 0)
+	if (c->getHP() > 0)
 		delete c;
-	if (d->getHP() >= 0)
+	if (d->getHP() > 0)
 		delete d;
 	delete pf;
 	delete pr;
