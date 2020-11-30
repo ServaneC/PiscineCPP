@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 13:53:49 by schene            #+#    #+#             */
-/*   Updated: 2020/11/29 17:26:37 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/30 12:51:02 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int			Bureaucrat::getGrade() const
 	return this->_grade;
 }
 
-std::string	Bureaucrat::getName() const
+std::string	const Bureaucrat::getName() const
 {
 	return this->_name;
 }
@@ -66,6 +66,17 @@ void		Bureaucrat::move_down()
 		_grade++;
 	return ;
 }
+
+void		Bureaucrat::signForm(std::string form, std::string reason) const
+{
+	std::cout << this->_name;
+	if (reason.empty())
+		std::cout << " signs " << form;
+	else
+		std::cout <<  " cant sign " << form << " because " << reason;
+	std::cout << std::endl;
+}
+
 
 std::ostream&		operator<<(std::ostream & o, Bureaucrat const & rhs)
 {
