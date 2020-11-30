@@ -6,11 +6,12 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 13:53:49 by schene            #+#    #+#             */
-/*   Updated: 2020/11/30 21:42:55 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/30 21:42:22 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(std::string const name, int grade) :
 	_name(name), _grade(grade)
@@ -75,6 +76,18 @@ void		Bureaucrat::signForm(std::string form, std::string reason) const
 	else
 		std::cout << RED <<  " cant sign " << YELLOW << form << " because " << reason;
 	std::cout << END << std::endl;
+}
+
+void 		Bureaucrat::executeForm(Form const & form)
+{
+	try
+	{
+		form.execute(*this);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }
 
 

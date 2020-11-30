@@ -6,11 +6,13 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 13:53:57 by schene            #+#    #+#             */
-/*   Updated: 2020/11/30 22:03:57 by schene           ###   ########.fr       */
+/*   Updated: 2020/11/30 22:02:37 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 void	try_move_up(Bureaucrat &b)
 {
@@ -38,17 +40,30 @@ void	try_to_sign(Form *form, Bureaucrat b)
 
 int main()
 {
-	Bureaucrat	Pierre("Pierre", 2);
-	Bureaucrat	Paul("Paul", 136);
-	Form		contract("Contract", 50, 100);
-	Form		paper("Paper", 135, 100);
-	
-	std::cout << CYAN << Pierre << Paul << contract << std::endl;
-	try_to_sign(&contract, Paul);
-	try_to_sign(&contract, Pierre);
-	try_to_sign(&contract, Paul);
-	try_to_sign(&paper, Paul);
-	try_move_up(Paul);
-	try_to_sign(&paper, Paul);
+	Bureaucrat	Jean("Jean", 2);
+	Bureaucrat	Pierre("Pierre", 145);
+	PresidentialPardonForm	presidential("Luc");
+	RobotomyRequestForm		robotrquest("Michel");
+	ShrubberyCreationForm	bery("House");
+
+	std::srand(std::time(nullptr));
+	std::cout << CYAN << Jean << Pierre << presidential
+		 << robotrquest << bery << END << std::endl;
+	try_to_sign(&bery, Pierre);
+	Jean.executeForm(bery);
+
+	try_to_sign(&robotrquest, Pierre);
+	try_to_sign(&robotrquest, Jean);
+	try_to_sign(&robotrquest, Pierre);
+	Pierre.executeForm(robotrquest);
+	Jean.executeForm(robotrquest);
+	Jean.executeForm(robotrquest);
+	Jean.executeForm(robotrquest);
+	Jean.executeForm(robotrquest);
+
+	try_to_sign(&presidential, Pierre);
+	try_to_sign(&presidential, Jean);
+	try_to_sign(&presidential, Jean);
+	Jean.executeForm(presidential);
 	return 0;
 }
