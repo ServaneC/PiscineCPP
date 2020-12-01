@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 16:58:34 by schene            #+#    #+#             */
-/*   Updated: 2020/11/30 12:56:27 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/01 22:35:18 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,16 @@ Form	&	Form::operator=(Form const &rhs)
 	if (this != &rhs)
 		_signed = rhs._signed;
 	return *this;
+}
+
+const char* Form::GradeTooHighException::what() const throw()
+{
+	return ("The grade is too high !");
+}
+
+const char* Form::GradeTooLowException::what() const throw()
+{
+	return ("The grade is too low !");
 }
 
 std::string	const	Form::getName() const

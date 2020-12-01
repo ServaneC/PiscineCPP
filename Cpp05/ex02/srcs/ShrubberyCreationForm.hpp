@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 13:21:02 by schene            #+#    #+#             */
-/*   Updated: 2020/11/30 15:59:29 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/01 22:20:54 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ShrubberyCreationForm : public Form
 	public:
 		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(ShrubberyCreationForm const & to_copy);
-		~ShrubberyCreationForm();
+		virtual  ~ShrubberyCreationForm();
 
 		ShrubberyCreationForm	&operator=(ShrubberyCreationForm const &rhs);
 		void					execute(Bureaucrat const & executor) const;

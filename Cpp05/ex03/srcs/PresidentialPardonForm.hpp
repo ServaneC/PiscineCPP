@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 13:20:10 by schene            #+#    #+#             */
-/*   Updated: 2020/12/01 22:16:01 by schene           ###   ########.fr       */
+/*   Created: 2020/11/30 13:19:00 by schene            #+#    #+#             */
+/*   Updated: 2020/12/01 22:14:58 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
-# include "Form.hpp"
+#include "Form.hpp"
 
-class RobotomyRequestForm : public Form
+class PresidentialPardonForm : public Form
 {
 	private:
-		RobotomyRequestForm();
+		PresidentialPardonForm();
 		std::string		_target;
 
 	public:
-		RobotomyRequestForm(std::string target);
-		RobotomyRequestForm(RobotomyRequestForm const & to_copy);
-		virtual ~RobotomyRequestForm();
+		PresidentialPardonForm(std::string target);
+		PresidentialPardonForm(PresidentialPardonForm const & to_copy);
+		virtual ~PresidentialPardonForm();
 
-		RobotomyRequestForm	&operator=(RobotomyRequestForm const &rhs);
-		void				execute(Bureaucrat const & executor) const;
+		PresidentialPardonForm	&operator=(PresidentialPardonForm const &rhs);
+		void					execute(Bureaucrat const & executor) const;	
 };
 
-#endif
+#endif 

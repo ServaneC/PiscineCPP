@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 16:49:55 by schene            #+#    #+#             */
-/*   Updated: 2020/12/01 22:34:14 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/01 22:37:28 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Form
 	public:
 		Form(std::string const name, int const grade_to_sign, int const grade_to_exec);
 		Form(Form const &to_copy);
-		~Form();
+		virtual ~Form();
 
 		Form	&			operator=(Form const &rhs);
 		std::string	const	getName() const;
@@ -35,12 +35,17 @@ class Form
 		int					getGradeToSign() const;
 		int					getGradeToExec() const;
 		void				beSigned(Bureaucrat signatory);
-	
+		virtual void		execute(Bureaucrat const & executor) const = 0;
+		
 		class GradeTooHighException : public std::exception
 		{
 			virtual const char* what() const throw();
 		};
 		class GradeTooLowException : public std::exception
+		{
+			virtual const char* what() const throw();
+		};
+		class NotSigned : public std::exception
 		{
 			virtual const char* what() const throw();
 		};

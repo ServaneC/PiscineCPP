@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 13:53:49 by schene            #+#    #+#             */
-/*   Updated: 2020/11/30 21:42:55 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/01 22:30:52 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,16 @@ Bureaucrat&	Bureaucrat::operator=(Bureaucrat const & rhs)
 	if (this != &rhs)
 		this->_grade = rhs._grade;
 	return *this;
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("The grade is too high !");
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("The grade is too low !");
 }
 
 int			Bureaucrat::getGrade() const

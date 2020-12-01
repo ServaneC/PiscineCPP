@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 13:20:10 by schene            #+#    #+#             */
-/*   Updated: 2020/12/01 22:16:01 by schene           ###   ########.fr       */
+/*   Created: 2020/11/30 13:21:02 by schene            #+#    #+#             */
+/*   Updated: 2020/12/01 22:15:08 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#ifndef SHRUBBERYFORM_HPP
+# define SHRUBBERYFORM_HPP
 
 # include "Form.hpp"
+# include <fstream>
 
-class RobotomyRequestForm : public Form
+class ShrubberyCreationForm : public Form
 {
 	private:
-		RobotomyRequestForm();
+		ShrubberyCreationForm();
 		std::string		_target;
 
 	public:
-		RobotomyRequestForm(std::string target);
-		RobotomyRequestForm(RobotomyRequestForm const & to_copy);
-		virtual ~RobotomyRequestForm();
+		ShrubberyCreationForm(std::string target);
+		ShrubberyCreationForm(ShrubberyCreationForm const & to_copy);
+		virtual ~ShrubberyCreationForm();
 
-		RobotomyRequestForm	&operator=(RobotomyRequestForm const &rhs);
-		void				execute(Bureaucrat const & executor) const;
+		ShrubberyCreationForm	&operator=(ShrubberyCreationForm const &rhs);
+		void					execute(Bureaucrat const & executor) const;
 };
+
 
 #endif
