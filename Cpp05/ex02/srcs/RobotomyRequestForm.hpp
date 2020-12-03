@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 13:20:10 by schene            #+#    #+#             */
-/*   Updated: 2020/12/01 22:16:01 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/03 10:44:09 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ROBOTOMYREQUESTFORM_HPP
 
 # include "Form.hpp"
+# include <cstdlib>
+# include <ctime>
 
 class RobotomyRequestForm : public Form
 {

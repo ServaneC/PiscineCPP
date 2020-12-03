@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 13:53:57 by schene            #+#    #+#             */
-/*   Updated: 2020/11/30 22:02:37 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/03 10:44:47 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int main()
 	RobotomyRequestForm		robotrquest("Michel");
 	ShrubberyCreationForm	bery("House");
 
-	std::srand(std::time(nullptr));
+	std::srand(std::time(NULL));
 	std::cout << CYAN << Jean << Pierre << presidential
 		 << robotrquest << bery << END << std::endl;
 	try_to_sign(&bery, Pierre);

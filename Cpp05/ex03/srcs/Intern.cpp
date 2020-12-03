@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 22:07:18 by schene            #+#    #+#             */
-/*   Updated: 2020/12/01 22:43:58 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/03 10:58:42 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,5 @@ Form		*Intern::makeForm(std::string name, std::string target) const
 		}
 	}
 	std::cout << RED << "ERROR: " << name << " is not a known form." << END << std::endl;
-	return nullptr;
+	return NULL;
 }

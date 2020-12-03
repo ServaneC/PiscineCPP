@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 15:40:18 by schene            #+#    #+#             */
-/*   Updated: 2020/12/01 22:58:34 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/03 10:57:20 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ void			ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		throw Form::NotSigned();
 	else
 	{
-		std::ofstream tree(this->_target + "_shrubbery");
+		std::string filename = (this->_target + "_shrubbery");
+		std::ofstream tree(filename.c_str());
 		tree << "                         (***)" << std::endl;
 		tree << "   (***)               (*******)" << std::endl;
 		tree << "  (*****)             (*********)" << std::endl;

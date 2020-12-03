@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 13:53:57 by schene            #+#    #+#             */
-/*   Updated: 2020/12/01 22:46:51 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/03 10:44:52 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main()
 {
 	Bureaucrat	Jean("Jean", 2);
 	Intern someRandomIntern;
-	std::srand(std::time(nullptr));
+	std::srand(std::time(NULL));
 	
 	Form* robot= someRandomIntern.makeForm("robotomy request", "Bender");
 	Form* pardon= someRandomIntern.makeForm("presidential pardon", "Robert");
