@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 13:53:57 by schene            #+#    #+#             */
-/*   Updated: 2020/12/03 10:44:52 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/03 11:14:36 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int main()
 	try_to_sign(castle, Jean);
 	Jean.executeForm(*castle);
 	Jean.executeForm(*pardon);
+	Jean.executeForm(*robot);
 	Jean.executeForm(*robot);
 
 	delete robot;

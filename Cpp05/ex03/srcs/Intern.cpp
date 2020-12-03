@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 22:07:18 by schene            #+#    #+#             */
-/*   Updated: 2020/12/03 10:58:42 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/03 11:13:14 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,14 @@ Form		*Intern::makeShrubberyCreation(std::string const &target)
 
 Form		*Intern::makeForm(std::string name, std::string target) const
 {
-	
-	std::string known_forms[] = {"presidential pardon", 
-		"robotomy request", "shrubbery creation"};
-	Form	*(*forms_ptr[])(std::string const &target)= {&Intern::makePresidentialPardon, 
-		&Intern::makeRobotomyRequest, &Intern::makeShrubberyCreation};
+	std::string known_forms[] = 
+		{"presidential pardon",
+		 "robotomy request",
+		 "shrubbery creation"};
+	Form	*(*forms_ptr[])(std::string const &target) = 
+		{&Intern::makePresidentialPardon,
+		 &Intern::makeRobotomyRequest,
+		 &Intern::makeShrubberyCreation};
 
 	for (int i = 0; i < 3; i++)
 	{

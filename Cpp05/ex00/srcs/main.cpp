@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 13:53:57 by schene            #+#    #+#             */
-/*   Updated: 2020/11/29 17:32:05 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/03 11:03:00 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int main()
 	std::cout << GREY << "------------------------------------------" << END << std::endl;
 
 	std::cout << Pierre << Paul;
-	std::cout << GREY << "Jacque is a copy of Pierre:" << END << std::endl;
+	std::cout << GREY << "This is a copy of Pierre:" << END << std::endl;
 	std::cout << Jacque;
 	std::cout << GREY << "------------------------------------------" << END << std::endl;
 
