@@ -6,17 +6,17 @@
 #    By: schene <schene@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/29 13:53:44 by schene            #+#    #+#              #
-#    Updated: 2020/12/07 12:30:53 by schene           ###   ########.fr        #
+#    Updated: 2020/12/07 12:31:01 by schene           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= srcs/main.cpp srcs/Convert.cpp
+SRCS		= srcs/main.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
 RM			= rm -f
 
-NAME		= convert
+NAME		= ex01
 
 CC			= clang++
 
