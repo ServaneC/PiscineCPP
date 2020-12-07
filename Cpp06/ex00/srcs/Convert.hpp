@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:25:48 by schene            #+#    #+#             */
-/*   Updated: 2020/12/07 00:48:11 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/07 16:45:39 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # include <iostream>
 # include <climits>
-# include <iomanip> 
+# include <iomanip>
+# include <cstdlib> 
 
 # define UNDEF 0
 # define CHAR  1

@@ -6,13 +6,14 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 12:19:17 by schene            #+#    #+#             */
-/*   Updated: 2020/12/07 15:46:13 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/07 16:46:40 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <climits>
 
 struct Data
 {
