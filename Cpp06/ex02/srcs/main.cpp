@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 16:08:40 by schene            #+#    #+#             */
-/*   Updated: 2020/12/07 16:41:45 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/07 23:22:36 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,6 @@ void	identify_from_pointer(Base * p)
 		std::cout << "B" << std::endl;
 	else if (c != NULL)
 		std::cout << "C" << std::endl;
-	else
-		std::cout << "It's just a Base" << std::endl;
 }
 
 void	identify_from_reference( Base & p)

@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:25:32 by schene            #+#    #+#             */
-/*   Updated: 2020/12/07 01:12:58 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/07 23:16:56 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,16 +140,19 @@ void		Convert::_find_type()
 	else if (_is_int())
 		this->_type = INT;
 	else if (_is_float())
+	{
 		this->_type = FLOAT;
+		_to_convert.erase(_to_convert.size() - 1, 1);
+	}
 	else if (_is_double())
 		this->_type = DOUBLE;
 	if (this->_type == FLOAT || this->_type == DOUBLE)
 	{
 		size_t 		point = _to_convert.find('.');
 		std::string after_pt = _to_convert.substr(point + 1);
+		while (after_pt[after_pt.size() - 1] == '0')
+			after_pt.erase(after_pt.size() - 1, 1);
 		this->_precision = after_pt.size();
-		if (this->_type == FLOAT)
-			this->_precision--;
 	}
 }
 

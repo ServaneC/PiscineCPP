@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 12:19:17 by schene            #+#    #+#             */
-/*   Updated: 2020/12/07 16:46:40 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/07 23:29:39 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ char	random_char(void)
 
 void * 	serialize(void)
 {
-	char	*raw = new char[sizeof(char) * (8 * 2) + sizeof(int)];
+	char	*raw = new char[20];
 
 	for (int i = 0; i < 8; i++)
 		raw[i] = random_char();
-	*reinterpret_cast<int*>(&raw[8]) = std::rand() % INT_MAX;
+	*reinterpret_cast<int*>(&raw[8]) = std::rand();
 	for (int i = 12; i < 20; i++)
 		raw[i] = random_char();	
 	return (raw);
@@ -59,7 +59,6 @@ int main()
 {
 	std::srand(std::time(NULL));
 	void *raw = serialize();
-	std::cout << "adress: " << raw << std::endl;
 	Data *data = deserialize(raw);
 	std::cout << data->s1 << std::endl;
 	std::cout << data->n << std::endl;
