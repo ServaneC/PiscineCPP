@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 11:39:01 by schene            #+#    #+#             */
-/*   Updated: 2020/12/11 13:42:40 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/11 14:20:53 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,13 @@ int main()
 	char		assign = 'a';
 
 	std::cout << "size of char_array = " << char_array.size() << std::endl;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		try
 		{
-			std::cout << "try to assign and print char_array[" << i << "] -> ";
+			std::cout << "try to print char_array[" << i << "] -> ";
+			std::cout << char_array[i] << std::endl;
+			std::cout << "try to print after assigning a value char_array[" << i << "] -> ";
 			char_array[i] = assign++;
 			std::cout << char_array[i] << std::endl;
 		}
@@ -88,6 +90,5 @@ int main()
 			std::cerr << e.what() << '\n';
 		}
 	}
-	
 	return 0;
 }
