@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 09:50:20 by schene            #+#    #+#             */
-/*   Updated: 2020/12/11 14:31:31 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/14 11:28:04 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	display_float(float const &f)
 template <typename T>
 void	display(T const &a)
 {
-	std::cout << a << std::endl;
+	std::cout <<  "I'm type T in a template with a value of " << a << std::endl;
 }
 
 int main()
