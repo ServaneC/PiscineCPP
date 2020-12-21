@@ -6,7 +6,7 @@
 /*   By: schene <schene@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 15:03:17 by schene            #+#    #+#             */
-/*   Updated: 2020/12/17 13:48:43 by schene           ###   ########.fr       */
+/*   Updated: 2020/12/20 10:34:55 by schene           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int main ()
 {
 	std::vector<int> 	v1(10, 0);
-	
+
 	std::cout << "vector = ";
 	for (int i = 0; i < 10; i++)
 	{
@@ -32,9 +32,10 @@ int main ()
 	{
 		int nb = 12 + (i*2);
 		std::vector<int>::iterator found = easyfind(v1, nb);
-		if (*found)
+		if (found != v1.end())
 			std::cout << GREEN  << *found << " is in the vector !" << END << std::endl;
 		else
 			std::cout << RED << nb << " is not in the vector..."<< END << std::endl;
+		nb = 0;
 	}
 }
